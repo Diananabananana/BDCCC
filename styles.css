@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.slider {
+    width: 90%;
+    max-width: 800px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    touch-action: pan-y; /* 모바일에서 세로 방향으로 터치 동작을 허용합니다 */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* 슬라이드 이동을 부드럽게 하기 위해 transition 추가 */
+    will-change: transform;
+}
+
+.slide {
+    min-width: 100%; /* 각 슬라이드가 화면 너비의 100%를 차지하도록 설정 */
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .slider {
+        width: 100%;
+    }
+}
